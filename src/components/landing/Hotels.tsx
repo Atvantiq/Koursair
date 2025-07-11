@@ -44,7 +44,9 @@ export default function HotelSection() {
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-800">
               Popular Hotels and Accommodations
             </h2>
-            <div className="absolute -top-2 left-0 h-[3px] w-16 bg-gradient-to-r from-[#c49c7a] to-gray-400 rounded" />
+            <span className="block w-[120px] h-[2px] bg-[#e1e1e1] left-0">
+    <em className="block w-[60px] h-[2px] bg-[#beac92]"></em>
+  </span>
           </div>
           <p className="text-gray-500 text-sm md:text-base">
             Cum doctus civibus efficiantur in imperdiet deterruisset.

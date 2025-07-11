@@ -74,11 +74,6 @@ export default function PopularToursSection() {
     setCurrentIndex(index);
   };
 
-  const getRatingClass = (rating: number) => {
-    if (rating >= 8) return "bg-blue-500";
-    if (rating >= 7) return "bg-teal-500";
-    return "bg-gray-500";
-  };
 
   const getCardStyle = (index: number) => {
     const distance = Math.abs(currentIndex - index);
@@ -164,9 +159,12 @@ export default function PopularToursSection() {
         <div className="max-w-[1600px] mx-auto px-4">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <h2 className="section-title text-4xl font-bold text-gray-800 mb-4">
+            <h2 className=" text-4xl font-bold text-gray-800">
               Our Popular Tours
             </h2>
+            <span className="block w-[120px] h-[2px] bg-[#e1e1e1] mx-auto mb-4">
+    <em className="block w-[60px] h-[2px] bg-[#beac92] mx-auto"></em>
+  </span>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Cum doctus civibus efficiantur in imperdiet deterruisset.
             </p>
@@ -246,9 +244,7 @@ export default function PopularToursSection() {
                           <span>{tour.reviews} Reviews</span>
                         </div>
                         <div
-                          className={`px-3 py-1 text-white font-semibold rounded ${getRatingClass(
-                            tour.rating
-                          )}`}
+                          className="px-3 py-1 text-white font-semibold rounded bg-teal-500"
                         >
                           {tour.rating.toFixed(1)}
                         </div>
