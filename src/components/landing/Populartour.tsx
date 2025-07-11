@@ -10,80 +10,93 @@ export default function PopularToursSection() {
   const tours = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=2020",
+      image:
+        "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=2020",
       category: "HISTORIC",
       title: "Versailles",
-      description: "Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.",
+      description:
+        "Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.",
       duration: "1h 30min",
       price: 25,
       rating: 7.0,
       reviews: 350,
-      isLiked: false
+      isLiked: false,
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=2073",
+      image:
+        "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=2073",
       category: "HISTORIC",
       title: "Versailles",
-      description: "Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.",
+      description:
+        "Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.",
       duration: "1h 30min",
       price: 25,
       rating: 7.0,
       reviews: 350,
-      isLiked: false
+      isLiked: false,
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=2187",
+      image:
+        "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=2187",
       category: "HISTORIC",
       title: "Versailles",
-      description: "Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.",
+      description:
+        "Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.",
       duration: "1h 30min",
       price: 25,
       rating: 7.0,
       reviews: 350,
-      isLiked: true
+      isLiked: true,
     },
     {
       id: 4,
-      image: "https://images.unsplash.com/photo-1543716091-a840c05249ec?q=80&w=2187",
+      image:
+        "https://images.unsplash.com/photo-1543716091-a840c05249ec?q=80&w=2187",
       category: "MUSEUM",
       title: "Pompidou Museum",
-      description: "Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.",
+      description:
+        "Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.",
       duration: "2h 30min",
       price: 45,
       rating: 8.0,
       reviews: 850,
-      isLiked: true
+      isLiked: true,
     },
     {
       id: 5,
-      image: "https://images.unsplash.com/photo-1478391679764-b2d8b3cd1e94?q=80&w=2070",
+      image:
+        "https://images.unsplash.com/photo-1478391679764-b2d8b3cd1e94?q=80&w=2070",
       category: "WALKING",
       title: "Tour Eiffel",
-      description: "Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.",
+      description:
+        "Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.",
       duration: "1h 30min",
       price: 65,
       rating: 8.0,
       reviews: 250,
-      isLiked: false
-    }
+      isLiked: false,
+    },
   ];
 
   const handleDotClick = (index: number) => {
     setCurrentIndex(index);
   };
 
-
   const getCardStyle = (index: number) => {
     const distance = Math.abs(currentIndex - index);
     const isCenter = distance === 0;
     const isAdjacent = distance === 1;
-    
+
     return {
-      transform: isCenter ? 'scale(1)' : isAdjacent ? 'scale(0.85)' : 'scale(0.8)',
+      transform: isCenter
+        ? "scale(1)"
+        : isAdjacent
+        ? "scale(0.85)"
+        : "scale(0.8)",
       opacity: isCenter ? 1 : isAdjacent ? 0.7 : 0.5,
-      filter: isCenter ? 'none' : isAdjacent ? 'blur(1px)' : 'blur(2px)',
+      filter: isCenter ? "none" : isAdjacent ? "blur(1px)" : "blur(2px)",
       zIndex: isCenter ? 20 : 10,
     };
   };
@@ -91,14 +104,14 @@ export default function PopularToursSection() {
   return (
     <>
       <style jsx>{`
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-        
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
         .section-title {
-          font-family: 'Poppins', sans-serif;
+          font-family: "Poppins", sans-serif;
           position: relative;
           display: inline-block;
         }
-        
+
         /* Custom decorative line above title */
         .decorative-line {
           position: relative;
@@ -110,9 +123,9 @@ export default function PopularToursSection() {
           align-items: center;
           justify-content: center;
         }
-        
+
         .decorative-line::before {
-          content: '';
+          content: "";
           position: absolute;
           width: 4px;
           height: 4px;
@@ -120,9 +133,9 @@ export default function PopularToursSection() {
           border-radius: 50%;
           left: -8px;
         }
-        
+
         .decorative-line::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 4px;
           height: 4px;
@@ -130,23 +143,23 @@ export default function PopularToursSection() {
           border-radius: 50%;
           right: -8px;
         }
-        
+
         /* Hide scrollbar */
         .slider-container::-webkit-scrollbar {
           display: none;
         }
-        
+
         .slider-container {
           -ms-overflow-style: none;
           scrollbar-width: none;
         }
-        
+
         /* Category badge styles */
         .category-badge {
           backdrop-filter: blur(10px);
           background: rgba(255, 255, 255, 0.9);
         }
-        
+
         /* Card transitions */
         .tour-card {
           transition: all 0.5s ease;
@@ -154,8 +167,6 @@ export default function PopularToursSection() {
       `}</style>
 
       <section className="py-16 bg-gray-50 relative">
-        
-        
         <div className="max-w-[1600px] mx-auto px-4">
           {/* Section Header */}
           <div className="text-center mb-12">
@@ -163,8 +174,8 @@ export default function PopularToursSection() {
               Our Popular Tours
             </h2>
             <span className="block w-[120px] h-[2px] bg-[#e1e1e1] mx-auto mb-4">
-    <em className="block w-[60px] h-[2px] bg-[#beac92] mx-auto"></em>
-  </span>
+              <em className="block w-[60px] h-[2px] bg-[#beac92] mx-auto"></em>
+            </span>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Cum doctus civibus efficiantur in imperdiet deterruisset.
             </p>
@@ -176,10 +187,12 @@ export default function PopularToursSection() {
             <div className="overflow-hidden py-8">
               <div
                 className="slider-container flex gap-6 transition-transform duration-500 ease-out"
-                style={{ 
-                  transform: `translateX(calc(50% - ${currentIndex * 376 + 175}px))`,
-                  paddingLeft: '20px',
-                  paddingRight: '20px'
+                style={{
+                  transform: `translateX(calc(50% - ${
+                    currentIndex * 376 + 175
+                  }px))`,
+                  paddingLeft: "20px",
+                  paddingRight: "20px",
                 }}
               >
                 {tours.map((tour, index) => (
@@ -193,22 +206,25 @@ export default function PopularToursSection() {
                       <Image
                         src={tour.image}
                         alt={tour.title}
-                        width={350} height={250}
+                        width={350}
+                        height={250}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
-                      
+
                       {/* Category Badge */}
                       <div className="absolute top-4 left-4">
                         <span className="category-badge px-3 py-1 text-xs font-semibold text-gray-700 rounded-full">
                           {tour.category}
                         </span>
                       </div>
-                      
+
                       {/* Like Button */}
                       <button className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
                         <Heart
                           className={`w-5 h-5 ${
-                            tour.isLiked ? 'fill-red-500 text-red-500' : 'text-gray-600'
+                            tour.isLiked
+                              ? "fill-red-500 text-red-500"
+                              : "text-gray-600"
                           }`}
                         />
                       </button>
@@ -231,7 +247,11 @@ export default function PopularToursSection() {
                         </div>
                         <div className="text-right">
                           <p className="text-sm text-gray-600">
-                            From <span className="text-[#c49c7a] font-semibold text-lg">${tour.price}</span> /per person
+                            From{" "}
+                            <span className="text-[#c49c7a] font-semibold text-lg">
+                              ${tour.price}
+                            </span>{" "}
+                            /per person
                           </p>
                         </div>
                       </div>
@@ -243,9 +263,7 @@ export default function PopularToursSection() {
                           <span className="mx-1">•</span>
                           <span>{tour.reviews} Reviews</span>
                         </div>
-                        <div
-                          className="px-3 py-1 text-white font-semibold rounded bg-teal-500"
-                        >
+                        <div className="px-3 py-1 text-white font-semibold rounded bg-teal-500">
                           {tour.rating.toFixed(1)}
                         </div>
                       </div>
@@ -263,8 +281,8 @@ export default function PopularToursSection() {
                   onClick={() => handleDotClick(index)}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     index === currentIndex
-                      ? 'w-8 bg-[#c49c7a]'
-                      : 'w-2 bg-gray-300 hover:bg-gray-400'
+                      ? "w-8 bg-[#c49c7a]"
+                      : "w-2 bg-gray-300 hover:bg-gray-400"
                   }`}
                   aria-label={`Go to tour ${index + 1}`}
                 />

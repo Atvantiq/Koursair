@@ -143,9 +143,9 @@ export default function HeroSection() {
         </div>
 
         {/* Search Section */}
-        <div className="relative bg-[#faf5ee] pb-8">
-          <div className="max-w-[1200px] mx-auto px-4">
-            <div className="bg-white shadow-xl rounded-lg p-6 -mt-16 relative z-20">
+        <div className="relative bg-[#faf5ee] pb-8 justify-center items-center   z-10">
+          <div className=" px-6">
+            <div className="bg-white shadow-xl rounded-lg p-6 -mt-16 relative left-1/2 transform -translate-x-1/2  z-20 md:w-[80%] lg:w-[70%] xl:w-[60%]">
               <div className="flex flex-col md:flex-row items-end gap-4">
                 {/* Where */}
                 <div className="flex-1 w-full">

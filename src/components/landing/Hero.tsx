@@ -214,7 +214,7 @@ export default function HeroSection() {
 
 
         {/* Search Form */}
-        <div className="absolute bottom-0 left-30 right-30 mx-4 md:left-70 md:right-70 md:w-[80%] lg:w-[70%] xl:w-[60%] bg-white bg-opacity-90 shadow-lg z-30 rounded-t-lg">
+        <div className="absolute bottom-0 justify-center items-center left-1/2 transform -translate-x-1/2 md:w-[80%] lg:w-[70%] xl:w-[60%] bg-white bg-opacity-90 shadow-lg z-30 rounded-t-lg">
           <div className="px-6 md:px-8">
             <div className="flex flex-col md:flex-row items-end py-4 gap-4 md:gap-6">
               {/* Where */}
