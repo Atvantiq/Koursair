@@ -238,7 +238,7 @@ export default function Navbar() {
                         </svg>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-lg">Book Hotels @ ₹0</h3>
+                        <h3 className="font-semibold text-lg">Book Hotels</h3>
                       </div>
                     </div>
 
